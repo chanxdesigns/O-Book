@@ -1,0 +1,129 @@
+/**
+ * Homepage Styles
+ */
+.homepage {
+  position: relative;
+  background: transparent;
+  width: 80%;
+  /**
+   * Site Description Container
+   */
+  .site-description {
+    //background: white;
+    //margin: 100px auto;
+    /**
+     * Site Title Text
+     */
+    .title-text {
+      text-align: center;
+      color: $primary-color;
+      margin: 0;
+      font-family: $main-font;
+      font-weight: 300;
+      @include fontSize(28.2);
+      letter-spacing: calculateRem(6);
+      line-height: calculateRem(52);
+      /**
+       * The Code inside Site Title text
+       */
+      span {
+        font-family: $code-font;
+        font-weight: 700;
+        @include fontSize(40);
+      }
+    }
+    /**
+     * Short Description
+     */
+    .short-description {
+      @include fontSize(15);
+      color: lighten($primary-color, 50%);
+      text-align: center;
+      margin-top: 20px;
+    }
+    /**
+     * Search Input
+     */
+    .search-input {
+      display: block;
+      outline: none;
+      border: 3px solid $accent-color;
+      background: transparent;
+      height: 60px;
+      width: 500px;
+      margin: 50px auto;
+      padding: 0 10px;
+      border-radius: 8px;
+      text-wrap: normal;
+      font-family: $code-font;
+      text-align: center;
+      @include fontSize(20);
+      @include boxSizing(border-box);
+      @include placeHolder(lighten($primary-color, 30%), 400);
+    }
+  }
+  /**
+   * The Site Tags Wrapper
+   */
+  .site-tags {
+    padding-top: 20px;
+    /**
+     * The Site Tag List Element
+     */
+    .tags-list {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      /**
+       * The Tag Elem
+       */
+      .tags {
+        list-style-type: none;
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        &:before {
+          content: "|";
+          margin-right: 10px;
+        }
+        &:first-of-type {
+          &:before {
+            content: "";
+          }
+        }
+        /**
+         * Link Inside Tag
+         */
+        a {
+          @include fontSize(18);
+          color: lighten($primary-color,10%);
+        }
+      }
+    }
+  }
+  .homepage-footer {
+    margin: 50px 0 0;
+    .footer-links-list {
+      list-style-type: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .footer-links {
+          color: lighten($primary-color,20%);
+        }
+      }
+    }
+    .attribution {
+      color: lighten($primary-color,40%);
+      text-align: center;
+      @include fontSize(14);
+      margin-top: 20px;
+    }
+  }
+}

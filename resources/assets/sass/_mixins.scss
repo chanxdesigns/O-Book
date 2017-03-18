@@ -1,0 +1,30 @@
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: #{$size}px; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin boxSizing ($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+@mixin placeHolder ($color, $weight) {
+  &:-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+  };
+  &:-ms-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+}

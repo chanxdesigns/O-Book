@@ -1,0 +1,129 @@
+/**
+ * Resources Listing Page
+ */
+.resources-page {
+  .site-title {
+    color: white;
+  }
+  .left-nav-languages {
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+    width: 15%;
+    height: 100%;
+    background: darken($primary-color, 10%);
+  }
+  #left-nav-search {
+    //display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid lighten($primary-color,10%);
+    background: transparent;
+    outline: none;
+    padding-right: 20px;
+    @include fontSize(15);
+    @include boxSizing(border-box);
+  }
+  .languages-list {
+    margin-top: 20px;
+    list-style-type: none;
+    .language {
+      display: block;
+      color: white;
+      font-family: $main-font;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 8px 30px;
+      @include fontSize(14);
+      &:hover {
+        background: $primary-color;
+      }
+      .logo-wrapper {
+        width: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        .logo {
+          display: block;
+          margin: 0 auto;
+          height: 20px;
+          width: auto;
+        }
+      }
+    }
+  }
+  .main-body {
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    padding: 50px 200px;
+    height: 100%;
+    z-index: 999;
+    @include boxSizing(border-box);
+    .language-desc {
+      .language-logo {
+        height: 50px;
+        display: block;
+        margin: auto;
+      }
+      .language-header {
+        font-family: $main-font;
+        color: $primary-color;
+        text-align: center;
+        @include fontSize(25);
+        .language-title {
+          color: $accent-color;
+        }
+      }
+    }
+    .posts {
+      margin: 50px 0 100px;
+      .post-title {
+        color: $primary-color;
+        font-family: $code-font;
+        @include fontSize(40);
+      }
+      .post-meta {
+        .author {
+          display: inline-block;
+          margin-right: 20px;
+          color: $primary-color;
+        }
+        .price {
+          color: $primary-color;
+          display: inline-block;
+        }
+        .name,
+        .amnt {
+          color: $accent-color;
+        }
+        .post-tags-list {
+          list-style-type: none;
+          margin: 20px 0;
+          //display: inline-block;
+          .post-tags {
+            display: inline-block;
+            @include fontSize(12);
+            a {
+              background: darken(white, 10%);
+              border-radius: 2px;
+              padding: 5px 10px;
+              color: lighten($primary-color, 10%);
+              @include boxSizing(border-box);
+              &:hover {
+                background: $accent-color;
+                color: white;
+              }
+            }
+          }
+        }
+        .post-details {
+          color: lighten($primary-color, 20%);
+          line-height: calculateRem(24);
+          @include fontSize(16);
+        }
+      }
+    }
+  }
+}
