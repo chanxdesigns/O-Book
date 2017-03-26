@@ -2,61 +2,10 @@
  * Resources Listing Page
  */
 .resources-page {
-  .site-title {
-    color: white;
-  }
-  .left-nav-languages {
-    position: fixed;
-    left: 0;
-    z-index: 9999;
-    width: 15%;
-    height: 100%;
-    background: darken($primary-color, 10%);
-  }
-  #left-nav-search {
-    //display: block;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid lighten($primary-color,10%);
-    background: transparent;
-    outline: none;
-    padding-right: 20px;
-    @include fontSize(15);
-    @include boxSizing(border-box);
-  }
-  .languages-list {
-    margin-top: 20px;
-    list-style-type: none;
-    .language {
-      display: block;
-      color: white;
-      font-family: $main-font;
-      font-weight: 400;
-      text-decoration: none;
-      padding: 8px 30px;
-      @include fontSize(14);
-      &:hover {
-        background: $primary-color;
-      }
-      .logo-wrapper {
-        width: 20px;
-        margin-right: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        .logo {
-          display: block;
-          margin: 0 auto;
-          height: 20px;
-          width: auto;
-        }
-      }
-    }
-  }
   .main-body {
     position: absolute;
-    left: 15%;
-    width: 85%;
+    left: 18%;
+    width: 82%;
     padding: 50px 200px;
     height: 100%;
     z-index: 999;

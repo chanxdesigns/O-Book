@@ -26,12 +26,20 @@ module.exports = function (grunt) {
                     dest: 'public/assets/js/'
                 }]
             }
+        },
+        // The auto compile function object
+        watch: {
+            css: {
+                files: 'resources/assets/sass/*',
+                tasks: ['sass','cssmin']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
 }

@@ -2,15 +2,7 @@
 @section('title', 'O-Book: Results for - '.\Illuminate\Support\Facades\Request::query('q'))
 @section('body')
     <div class="resources-page">
-        <div class="left-nav-languages">
-            <h3 class="site-title">O-Book</h3>
-            <input name="left-nav-search" id="left-nav-search" type="text">
-            <ul class="languages-list">
-                @foreach($languages as $langid => $language)
-                    <li><a class="language" id="{{$langid}}"><div class="logo-wrapper"><img class="logo" src="{{$language["logo"]}}"></div> <span>{{$language["name"]}}</span></a></li>
-                    @endforeach
-            </ul>
-        </div>
+        @include('partials.sidebar')
         <div class="main-body">
             <div class="language-desc">
                 <img class="language-logo" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg">
